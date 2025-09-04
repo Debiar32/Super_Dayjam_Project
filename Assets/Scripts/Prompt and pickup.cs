@@ -8,6 +8,7 @@ public class Prompt : MonoBehaviour
     
     private GameObject Player;
     public GameObject promptObj;
+    public GameObject Checklistobj;
     private GameObject promptText;
     private GameObject currentColObject;
     
@@ -86,7 +87,23 @@ public class Prompt : MonoBehaviour
             if (other.gameObject.name == "House")
             {
                 holding = false;
-                //RECIPE STUFF
+                //call Checklist stuff here
+                if (currentColObject.name == "Honey")
+                {
+                    Checklistobj.GetComponent<CheckList>().HoneyCheck();
+                }
+                if (currentColObject.name == "Flower")
+                {
+                    Checklistobj.GetComponent<CheckList>().FlowerCheck();
+                }
+                if (currentColObject.name == "Water")
+                {
+                    Checklistobj.GetComponent<CheckList>().WaterCheck();
+                }
+                currentColObject.GetComponent<Collider2D>().enabled = false;
+                colliding = false;
+                currentColObject.SetActive(false);
+                
             }
         }
     }
