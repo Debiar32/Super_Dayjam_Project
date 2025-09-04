@@ -22,8 +22,9 @@ public class Prompt : MonoBehaviour
     private GameObject holdingObject;
     void Update()
     {
+        
         //if not holding anything pickup object
-        if (Input.GetKeyDown(KeyCode.E) && holding == false)
+        if (Input.GetKeyDown(KeyCode.E) && holding == false && colliding == true)
         {
             currentColObject.GetComponent<Collider2D>().enabled = false; // disable prompt showing up
             holdingObject = currentColObject;
@@ -42,9 +43,10 @@ public class Prompt : MonoBehaviour
         {
             currentColObject.transform.position = Player.transform.position;
         }
+        
     }
     
-    
+    bool colliding = false;
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (holding == false)
@@ -55,12 +57,28 @@ public class Prompt : MonoBehaviour
                 promptText.GetComponent<TMP_Text>().text = "Press E to pickup Honey";
                 promptObj.SetActive(true);
                 currentColObject = other.gameObject;
+                colliding = true;
             }
-            else if (other.gameObject.name == "Leaf")
+            else if (other.gameObject.name == "Flower")
             {
-                promptText.GetComponent<TMP_Text>().text = "Press E to pickup Leaf";
+                promptText.GetComponent<TMP_Text>().text = "Press E to pickup Flower";
                 promptObj.SetActive(true);
                 currentColObject = other.gameObject;
+                colliding = true;
+            }
+            else if (other.gameObject.name == "Water")
+            {
+                promptText.GetComponent<TMP_Text>().text = "Press E to pickup Water";
+                promptObj.SetActive(true);
+                currentColObject = other.gameObject;
+                colliding = true;
+            }
+            else if (other.gameObject.name == "Coffee")
+            {
+                promptText.GetComponent<TMP_Text>().text = "Press E to pickup Coffee";
+                promptObj.SetActive(true);
+                currentColObject = other.gameObject;
+                colliding = true;
             }
         }
         else if (holding == true)
@@ -79,6 +97,7 @@ public class Prompt : MonoBehaviour
         if (other.gameObject.name == currentColObject.name)
         {
             promptObj.SetActive(false);
+            colliding = false;
         }
     }
     
