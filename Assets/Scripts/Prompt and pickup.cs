@@ -8,7 +8,7 @@ public class Prompt : MonoBehaviour
     
     private GameObject Player;
     public GameObject promptObj;
-    public GameObject promptText;
+    private GameObject promptText;
     private GameObject currentColObject;
     
     void Start()
