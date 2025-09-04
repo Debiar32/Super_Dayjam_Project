@@ -9,41 +9,64 @@ public class Prompt : MonoBehaviour
     private GameObject Player;
     public GameObject promptObj;
     public GameObject promptText;
-    private GameObject currentObject;
+    private GameObject currentColObject;
     
     void Start()
     {
         Player = GameObject.Find("Player");
         promptText = GameObject.Find("Prompt Text");
-        promptText.GetComponent<TMP_Text>().text = "Test";
     }
     
+    private bool holding = false;
+    private GameObject holdingObject;
     void Update()
     {
-   
+        if (Input.GetKeyDown(KeyCode.E) && holding == false)
+        {
+            currentColObject.GetComponent<Collider2D>().enabled = false;
+            holdingObject = currentColObject;
+            holding = true;
+        }
+        else if (Input.GetKeyDown(KeyCode.E) && holding == true)
+        {
+            holding = false;
+            currentColObject.GetComponent<Collider2D>().enabled = true;
+            currentColObject.transform.position = Player.transform.position;
+        }
+
+        if (holding == true)
+        {
+            currentColObject.transform.position = Player.transform.position;
+        }
     }
+    
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.name == "Honey")
+        if (holding == false)
         {
-            promptText.GetComponent<TMP_Text>().text = "Press E to pickup Honey";
-            promptObj.SetActive(true);
-            currentObject = other.gameObject;
+            if (other.gameObject.name == "Honey")
+            {
+                promptText.GetComponent<TMP_Text>().text = "Press E to pickup Honey";
+                promptObj.SetActive(true);
+                currentColObject = other.gameObject;
+            }
+            else if (other.gameObject.name == "Leaf")
+            {
+                promptText.GetComponent<TMP_Text>().text = "Press E to pickup Leaf";
+                promptObj.SetActive(true);
+                currentColObject = other.gameObject;
+            }
         }
-        else if (other.gameObject.name == "Leaf")
-        {
-            promptText.GetComponent<TMP_Text>().text = "Press E to pickup Leaf";
-            promptObj.SetActive(true);
-            currentObject = other.gameObject;
-        }
-        print(other.gameObject.name);
+
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.name == currentObject.name)
+        if (other.gameObject.name == currentColObject.name)
         {
             promptObj.SetActive(false);
         }
     }
+    
 }
