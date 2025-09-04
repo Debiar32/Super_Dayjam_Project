@@ -63,7 +63,14 @@ public class Prompt : MonoBehaviour
                 currentColObject = other.gameObject;
             }
         }
-
+        else if (holding == true)
+        {
+            if (other.gameObject.name == "House")
+            {
+                holding = false;
+                //RECIPE STUFF
+            }
+        }
     }
 
     // hide prompt
