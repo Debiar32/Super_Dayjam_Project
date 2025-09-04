@@ -15,6 +15,7 @@ public class Prompt : MonoBehaviour
     {
         Player = GameObject.Find("Player");
         promptText = GameObject.Find("Prompt Text");
+        promptObj.SetActive(false);
     }
     
     private bool holding = false;
