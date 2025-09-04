@@ -21,12 +21,14 @@ public class Prompt : MonoBehaviour
     private GameObject holdingObject;
     void Update()
     {
+        //if not holding anything pickup object
         if (Input.GetKeyDown(KeyCode.E) && holding == false)
         {
-            currentColObject.GetComponent<Collider2D>().enabled = false;
+            currentColObject.GetComponent<Collider2D>().enabled = false; // disable prompt showing up
             holdingObject = currentColObject;
             holding = true;
         }
+        //drop item
         else if (Input.GetKeyDown(KeyCode.E) && holding == true)
         {
             holding = false;
@@ -34,6 +36,7 @@ public class Prompt : MonoBehaviour
             currentColObject.transform.position = Player.transform.position;
         }
 
+        // make pickdup object follow
         if (holding == true)
         {
             currentColObject.transform.position = Player.transform.position;
@@ -45,6 +48,7 @@ public class Prompt : MonoBehaviour
     {
         if (holding == false)
         {
+            // set text, show prompt, save collided object
             if (other.gameObject.name == "Honey")
             {
                 promptText.GetComponent<TMP_Text>().text = "Press E to pickup Honey";
@@ -61,6 +65,7 @@ public class Prompt : MonoBehaviour
 
     }
 
+    // hide prompt
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.gameObject.name == currentColObject.name)
