@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 01fe2ac6328d3a44a86637e5234a822a
+guid: 643d669b11e22c447bbcdabf6808cdb7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4307883509914957821
-    second: Game_Jam_Cave-01_0
+      213: 98534899050804093
+    second: Game_Jam_Fence_and_Ground-01_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,8 +46,8 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
-  spriteExtrude: 1
+  spriteMode: 2
+  spriteExtrude: 0
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
@@ -113,23 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Game_Jam_Cave-01_0
+      name: Game_Jam_Fence_and_Ground-01_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 8000
-        height: 4500
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 807
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: df77e366a3da8cb30800000000000000
-      internalID: 4307883509914957821
+      spriteID: d73f6e7f7f01e5100800000000000000
+      internalID: 98534899050804093
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 1dc71853f7e6dd54393cb68dc6b65b31
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Game_Jam_Cave-01_0: 4307883509914957821
+      Game_Jam_Fence_and_Ground-01_0: 98534899050804093
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

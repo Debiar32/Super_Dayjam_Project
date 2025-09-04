@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 01fe2ac6328d3a44a86637e5234a822a
+guid: b7ffb82150f69204982df469e8d41762
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4307883509914957821
-    second: Game_Jam_Cave-01_0
+      213: -7390449102965402588
+    second: Game_Jam_Fence_and_Ground-01 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1000
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Game_Jam_Cave-01_0
+      name: Game_Jam_Fence_and_Ground-01 1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 8000
-        height: 4500
+        height: 847
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: df77e366a3da8cb30800000000000000
-      internalID: 4307883509914957821
+      spriteID: 424942772b9df6990800000000000000
+      internalID: -7390449102965402588
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Game_Jam_Cave-01_0: 4307883509914957821
+      Game_Jam_Fence_and_Ground-01 1_0: -7390449102965402588
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

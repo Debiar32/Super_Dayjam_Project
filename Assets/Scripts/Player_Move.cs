@@ -69,14 +69,17 @@ public class Player_Move : MonoBehaviour
         switch (Current_State)
         {
             case Player_States.Idle:
-                //animator.CrossFade("Idle", 0.1f);
+               
 
                 if (Move_Axis.x != 0)
                 {
+                    animator.CrossFade("running", 0.1f);
                     Current_State = Player_States.Move;
+                   
                 }
                 if (Jump.IsPressed() && Ground_Check() == true)
                 {
+                    animator.CrossFade("jump",0.1f);
                     Current_State = Player_States.Jump;
                 }
                 break;
@@ -87,6 +90,7 @@ public class Player_Move : MonoBehaviour
                 }
                 if (Jump.IsPressed() && Ground_Check() == true )
                 {
+                    animator.CrossFade("jump",0.1f);
                     Current_State = Player_States.Jump;
                 }
                 break;
@@ -105,7 +109,7 @@ public class Player_Move : MonoBehaviour
                 break;
             case Player_States.Falling:
                 //Falling Animation;
-                
+                animator.CrossFade("Idle",0.1f);
                     Current_State = Player_States.Idle;
                    
                 
